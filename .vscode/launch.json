@@ -20,6 +20,7 @@
             "name": "C# Prep 1",
             "type": "coreclr",
             "request": "launch",
+            "brokeredServicePipeName": "undefined",
             "preLaunchTask": "build-csharp-prep-Prep1",
             "program": "${workspaceFolder}/csharp-prep/Prep1/bin/Debug/net8.0/Prep1.dll",
             "args": [],
