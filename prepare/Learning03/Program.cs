@@ -3,7 +3,10 @@ using System;
 class Program
 {
     static void Main(string[] args)
-    {
-        Console.WriteLine("Hello Learning03 World!");
-    }
+    void DisplayPersonalMessage(string userName)
+
+{
+    Console.WriteLine($"Hello {userName}");
+}
+    
 }
