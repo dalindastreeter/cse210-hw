@@ -4,16 +4,37 @@ class Program
 {
     static void Main(string[] args)
     {
-        Random random = new Random();
-     
-     int guessNumber = random.Next(1, 11);
-     {   Console.WriteLine("Guess the magic number (between 1 and 11: ");}
-    
-    {
-        Console.Write("what is tnhe magic number? ");
-        Console.Write("What is your guess");
+        // Random random = new Random();
+        // int guessNumber = random.Next(1, 11);
+        {
+            Console.Write("Enter the guess number: ");
+            int guessNumber = int.Parse(Console.ReadLine()); 
 
+        
+            Console.Write("Enter your guess: ");
+            int userGuess = int.Parse(Console.ReadLine()); 
+
+        
+            if (userGuess < guessNumber)
+            {
+                Console.Write("Higher"); 
+            }
+            else if (userGuess > guessNumber)
+            {
+                Console.Write("Lower"); 
+            }
+            else
+            {
+                Console.Write("You got it!"); 
+            }
+        }    
     }
+    
+    // Console.WriteLine("Guess the guessNumber (between 1 and 11: ");
+        //  Console.Write($"what is the guessNumber {guessNumber}? ");
+    // Console.Write("What is your guess");
+
+    
 }
 // In the Guess My Number game the computer picks a magic number, and then the user tries to guess it. After each guess, the computer tells the user to guess "higher" or "lower" until they guess the magic number.
 
