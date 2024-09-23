@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         // ask user grade percentage
-        Console.Write("What is your grade? ");
+        Console.Write("What is your grade? "); 
         string userInput = Console.ReadLine();
         int grados = int.Parse(userInput);
         // determinar  letter grade
