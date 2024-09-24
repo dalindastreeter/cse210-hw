@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.Runtime;
+using System.Security.AccessControl;
 
 class Program
 
@@ -8,9 +9,12 @@ class Program
     static void Main(string[] args)
     {
         DisplayMessage();
-        PromptUserName();
-        PromptUserNumber();
-        // SquareNumber();
+        string name = PromptUserName();
+        int num= PromptUserNumber();
+        int square = SquareNumber(num);
+    
+
+        Console.WriteLine($"{name}, the square of your number is {square}");
         // DisplayResult();
     }
 
@@ -34,19 +38,21 @@ class Program
         return n;
     }
     
-    //  static int SquareNumber()
-    //  {
-
-
-    //  }
-
-
-    // static void DisplayResult()
-    // {
-
-    // }
-
+     static int SquareNumber(int number)
+    {
+        return  number * number;
+    }
+     static void DisplayResult(string name, int square)
+    {
+      Console.WriteLine($"{name}, the square of your number is {square}.");
+    }
 }
+    
+
+    
+
+    
+
 
 
 // DisplayWelcome - Displays the message, "Welcome to the Program!"
