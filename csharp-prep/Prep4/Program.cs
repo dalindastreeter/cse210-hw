@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 class Program
 {
@@ -28,12 +29,20 @@ class Program
         {
             sum += number;
         }
-            
+        
+        int max = 0;
+        foreach (int number in numbers)
+        {
+            if (number>max)
+            {
+                max = number;
+            }
+        }
         Console.WriteLine("The sum is: " + sum);
         float average=sum/numbers.Count; 
          
         Console.WriteLine("The average of the numbers is: " + average);
-            
+        Console.WriteLine($"The largest number is: {max}"); 
     }
 }
  
