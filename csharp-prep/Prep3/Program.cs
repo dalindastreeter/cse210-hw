@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 
 class Program
 {
@@ -9,62 +10,39 @@ class Program
         {
             Console.Write("Enter the guess number: ");
             int guessNumber = int.Parse(Console.ReadLine()); 
+            
+            int userGuess=0;
+            
+            while (userGuess != guessNumber)
+            {  
+                Console.Write("Enter your guess: ");    
+                userGuess= int.Parse(Console.ReadLine()); 
+                
+                if (userGuess < guessNumber)
+                {
+                    Console.WriteLine("Higher"); 
+                }
+                else if (userGuess > guessNumber)
+                {
+                    Console.WriteLine("Lower"); 
+                }
+                else
+                {
+                    Console.WriteLine("You got it! "); 
+                }
+            }
+        }
+    }     
+}
 
-        
-            Console.Write("Enter your guess: ");
-            int userGuess = int.Parse(Console.ReadLine()); 
+    
 
-        
-            if (userGuess < guessNumber)
-            {
-                Console.Write("Higher"); 
-            }
-            else if (userGuess > guessNumber)
-            {
-                Console.Write("Lower"); 
-            }
-            else
-            {
-                Console.Write("You got it!"); 
-            }
-        }    
-    }
     
     // Console.WriteLine("Guess the guessNumber (between 1 and 11: ");
         //  Console.Write($"what is the guessNumber {guessNumber}? ");
     // Console.Write("What is your guess");
 
     
-}
-// In the Guess My Number game the computer picks a magic number, and then the user tries to guess it. After each guess, the computer tells the user to guess "higher" or "lower" until they guess the magic number.
-
-// This assignment is a little tricky, because it brings together many of the concepts you've learned in this course including loops and if statements.
-
-// Core Requirements
-
-// Work through these core requirements step-by-step to complete the program. Please don't skip ahead and do the whole thing at once, because many people benefit from seeing the program built up step by step.
-
-// Start by asking the user for the magic number. (In future steps, we will change this to have the computer generate a random number, but to get started, we'll just let the user decide what it is.)
-// Ask the user for a guess.
-// Using an if statement, determine if the user needs to guess higher or lower next time, or tell them if they guessed it.
-// At this point, you won't have any loops.
-// The following shows the expected output at this point:
-
-
-//   What is the magic number? 6
-//   What is your guess? 4
-//   Higher
-  
-
-//   What is the magic number? 6 
-//   What is your guess? 7
-//   Lower
-  
-
-//   What is the magic number? 6
-//   What is your guess? 6
-//   You guessed it!
-  
 // Add a loop that keeps looping as long as the guess does not match the magic number.
 // At this point, the user should be able to keep playing until they get the correct answer.
 // The following shows the expected output at this point:
