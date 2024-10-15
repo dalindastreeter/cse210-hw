@@ -110,6 +110,8 @@ class Program
             }
 
         } while (menuChoice != "5");
-        Console.WriteLine("Quitting Scripture Memorizer.");
+        Console.WriteLine("Quitting Scripture Memorize.");
     }
 }
+
+// I created a memorize menu that give you different option to interact with the program, for example save and load the scriptures.
