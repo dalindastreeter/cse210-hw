@@ -8,8 +8,4 @@
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="memory.txt" />
-  </ItemGroup>
-
 </Project>
