@@ -7,19 +7,20 @@ class Program
         do
         {
             Console.WriteLine("Scripture Memorizer Menu");
-            Console.WriteLine("----Add scripture (1)");
-            Console.WriteLine("----Learn Scripture (2)");
-            Console.WriteLine("----Save Scriptures (3)");
-            Console.WriteLine("----Load Scriptures (4)");
-            Console.WriteLine("----Quit (5)");
+            Console.WriteLine("\tAdd scripture\t\t1");
+            Console.WriteLine("\tLearn Scripture\t\t2");
+            Console.WriteLine("\tSave Scriptures\t\t3");
+            Console.WriteLine("\tLoad Scriptures\t\t4");
+            Console.WriteLine("\tExit Program\t\t5");
             
             menuChoice = Console.ReadLine();
+            Console.Clear();
             if (menuChoice == "1")
             {
                 Console.WriteLine("Adding Scripture");
-                Console.WriteLine("What Book? ");
+                Console.Write("What Book(ex: Ruth)? ");
                 string book = Console.ReadLine();
-                Console.WriteLine("What Chapter? ");
+                Console.Write("What Chapter(ex: 1)? ");
                 string chapterRaw = Console.ReadLine();
                 if (chapterRaw == null)
                 {
@@ -27,7 +28,7 @@ class Program
                     continue;
                 }
                 int chapter = int.Parse(chapterRaw);
-                Console.WriteLine("What Verse(s)? ");
+                Console.Write("What Verse(ex: 3 or a range 3-15)? ");
                 string verseRaw = Console.ReadLine();
                 if (verseRaw == null)
                 {
@@ -55,7 +56,7 @@ class Program
                     Console.WriteLine("Invalid Verse.");
                     continue;
                 }
-                Console.WriteLine("What text? ");
+                Console.Write("What text? ");
                 string text = Console.ReadLine();
                 Reference reference = new Reference(
                     book,
@@ -108,9 +109,8 @@ class Program
                 Console.WriteLine("Loading Scriptures");
                 memory.LoadScriptures();
             }
-
         } while (menuChoice != "5");
-        Console.WriteLine("Quitting Scripture Memorize.");
+        Console.WriteLine("Exiting Scripture Memorize Program.");
     }
 }
 
