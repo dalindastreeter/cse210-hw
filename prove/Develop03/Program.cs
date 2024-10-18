@@ -1,3 +1,8 @@
+// additional features added on top of required features
+//   main menu for different interactions (load/save/add/learn)
+//   load scriptures from a file.
+//   Save scripture that we added
+//   Add scripture to a list the scripture that we learn
 class Program
 {
     static void Main(string[] args)
@@ -114,4 +119,3 @@ class Program
     }
 }
 
-// I created a memorize menu that give you different option to interact with the program, for example save and load the scriptures.
