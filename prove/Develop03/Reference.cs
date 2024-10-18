@@ -24,9 +24,9 @@ public class Reference
     {
         if (_verse == _endVerse)
         {
-            return $"({_book} {_chapter}:{_verse})";
+            return $"{_book} {_chapter}:{_verse}";
         }
-        return $"({_book} {_chapter}:{_verse}-{_endVerse})";
+        return $"{_book} {_chapter}:{_verse}-{_endVerse}";
     }
     
     public string GetBook(){
