@@ -8,8 +8,8 @@ class Comment
 {
     private string _namePerson;
     private string _text;
-    
-    public  Comment (string namePerson, string text)
+
+    public Comment(string namePerson, string text)
     {
         _namePerson = namePerson;
         _text = text;
@@ -19,5 +19,8 @@ class Comment
     {
         Console.WriteLine($"Name: {_namePerson}, Text: {_text}");
     }
- 
 }
+
+
+
+    
